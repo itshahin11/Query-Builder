@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrmController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,8 +35,15 @@ require __DIR__.'/auth.php';
 
 
 //__________________________________________
-// Route StartHere
+// Route Query_Builder StartHere
 //__________________________________________
 
 Route::get('/data', [DemoController::class, 'DemoAction']);
 Route::get('/data2', [DemoController::class, 'DemoAction2']);
+
+
+//__________________________________________
+// Route Orm StartHere
+//__________________________________________
+
+// Route::post('/create-brand', [OrmController::class, 'OrmAction']);
