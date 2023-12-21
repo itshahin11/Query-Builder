@@ -72,7 +72,11 @@ if ($product) {
 
     // Retrieving single Row
     // return Brand::first();
-    return Brand::find(2); //2 is id number
+    // return Brand::find(2); //2 is id number
+
+
+    // Retrieving List Of Column Values
+    
 
 
 
