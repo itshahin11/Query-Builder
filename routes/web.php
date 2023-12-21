@@ -18,7 +18,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,5 +45,14 @@ Route::get('/data2', [DemoController::class, 'DemoAction2']);
 //__________________________________________
 // Route Orm StartHere
 //__________________________________________
+//  ORM Route
+Route::POST('/create-brand', [OrmController::class, 'OrmAction']); //Data Insert
+Route::POST('/update-brand/{id}', [OrmController::class, 'OrmAction']); //Data Update 
+Route::POST('/update-create-brand/{brandName}', [OrmController::class, 'OrmAction']); //Data UpdateOrInsert 
+Route::POST('/update-create-brand/{brandName}', [OrmController::class, 'OrmAction']); //Data UpdateOrInsert 
+Route::POST('/delete-brand/{id}', [OrmController::class, 'OrmAction']); //Data Delete
+Route::get('/increment', [OrmController::class, 'OrmAction']); //Increment
+Route::get('/decrement', [OrmController::class, 'OrmAction']) ;//Decrement
+Route::get('/row', [OrmController::class, 'OrmAction']) ;// Retrieving All Rows & Retrieving single Row 
+Route::get('/row', [OrmController::class, 'OrmAction']) ;// Retrieving List Of Column Values
 
-// Route::post('/create-brand', [OrmController::class, 'OrmAction']);
