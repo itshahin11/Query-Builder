@@ -54,5 +54,9 @@ Route::POST('/delete-brand/{id}', [OrmController::class, 'OrmAction']); //Data D
 Route::get('/increment', [OrmController::class, 'OrmAction']); //Increment
 Route::get('/decrement', [OrmController::class, 'OrmAction']) ;//Decrement
 Route::get('/row', [OrmController::class, 'OrmAction']) ;// Retrieving All Rows & Retrieving single Row 
-Route::get('/row', [OrmController::class, 'OrmAction']) ;// Retrieving List Of Column Values
+Route::get('/column', [OrmController::class, 'OrmAction']) ;// Retrieving List Of Column Values
+Route::get('/agr', [OrmController::class, 'OrmAction']) ;// Aggregates
+Route::get('/etc', [OrmController::class, 'OrmAction']) ;// Select Clause //Advance Clause // OrderBy // GroupBy // Limiting Skiping
+Route::get('/page', [OrmController::class, 'OrmAction']) ; //Page
+
 
